@@ -1,0 +1,73 @@
+* {
+    font: 1rem 'Fira Sans', sans-serif;
+    color: white;
+}
+
+
+p {
+    max-width: 250px;
+    padding: 2px;
+    border: 2px solid lime;
+    background-color: black;
+    color: white;
+}
+
+span {
+    color: lime;
+}
+
+form {
+    display: table-cell;
+    vertical-align: middle;
+    border: 2px solid lime;
+    background-color: black;
+    width: 250px;
+    margin: 10px;
+    padding: 5px;
+}
+
+input {
+    transition: 0.4s ease-in-out;
+    margin: 2px;
+    padding: 3px;
+    background-color: azure;
+    color: black;
+    border-radius: 4px;
+}
+
+input[type=submit],
+input[type=button],
+input[type=reset] {
+    cursor: pointer;
+}
+
+input[type=submit]:hover,
+input[type=button]:hover,
+input[type=reset]:hover {
+    background-color: lawngreen;
+    border: 2px solid gold;
+}
+
+.s1 {
+    border: 2px solid lime;
+}
+
+.s1:focus {
+    border: 2px solid black;
+}
+
+.s2 {
+    border: 2px solid red;
+}
+
+.s2:focus {
+    border: 2px solid black;
+}
+
+.s3 {
+    border: 2px solid purple;
+}
+
+.s3:focus {
+    border: 2px solid black;
+}

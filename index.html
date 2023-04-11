@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>form</title>
+</head>
+
+<body>
+    <form name="f1" action="">
+        <input type="text" class="s1" name="text1" size="20" maxlength="50" value="text"><br />
+        <input type="text" class="s1" name="text2" size="20" maxlength="50" value="disabled" disabled><br />
+        <input type="text" class="s1" name="text3" size="20" maxlength="50" value="readonly" readonly><br />
+        <input type="password" class="s1" name="text4" size="20" maxlength="50"><br />
+        <label><input type="checkbox" name="t" value="t1">t1</label>
+        <label><input type="checkbox" name="t" value="t2">t2</label>
+        <label><input type="checkbox" name="t" value="t3">t3</label>
+        <label><input type="checkbox" name="t" value="t4">t4</label>
+        <label><input type="checkbox" name="t" value="t5">t5</label><br />
+        <label><input type="radio" class="r" name="xyz" value="x">x</label>
+        <label><input type="radio" class="r" name="xyz" value="y">y</label>
+        <label><input type="radio" class="r" name="xyz" value="z">z</label><br />
+        <input type="submit" name="submit" value="submit">
+        <input type="reset" name="reset" value="reset">
+    </form>
+    <form name="disc" action="">
+        <input type="text" class="s1" name="a" size="20" maxlength="50" id="a" value="1">
+        <input type="text" class="s2" name="b" size="20" maxlength="50" id="b" value="2">
+        <input type="text" class="s3" name="c" size="20" maxlength="50" id="c" value="3">
+        <input type="button" onclick="calcD()" style="width: 60px;" value="Submit">
+        <p>Answer: <span id="answer"></span></p>
+    </form>
+    <script>
+        let ans = document.getElementById('answer')
+        function calcD() {
+            let a = document.getElementById('a').value,
+                b = document.getElementById('b').value,
+                c = document.getElementById('c').value
+            if (a || b || c) {
+                d = b * b - 4 * a * c
+            } else {
+                ans.innerHTML = "не має коренів"
+                return
+            }
+            console.log(a, b, c, d)
+            if (d > 0) {
+                let x1 = (-1 * b - Math.sqrt(d)) / (2 * a);
+                let x2 = (-1 * b + Math.sqrt(d)) / (2 * a);
+                console.log("x1= " + x1 + "x2= " + x2);
+                ans.innerHTML = `x1= ${x1} x2= ${x2}`
+            } else if (d < 0) {
+                console.log("не має коренів");
+                ans.innerHTML = "не має коренів"
+            } else {
+                let x = -1 * +b / (2 * +a);
+                console.log("x=" + x);
+                ans.innerHTML = `x=  ${x}`
+            };
+        } 
+    </script>
+</body>
+
+</html>
